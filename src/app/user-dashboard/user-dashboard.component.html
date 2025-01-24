@@ -1,0 +1,311 @@
+<!-- fixed wala navbar -->
+<!-- <nav class="fixed w-full bg-transparent px-6 py-4 flex justify-between items-center z-10">
+  <div class="text-xl font-bold">
+    Logo
+  </div>
+
+  <ul class="flex space-x-8 text-lg font-medium">
+    <li><a href="#trips" class="hover:text-gray-500">Trips</a></li>
+    <li><a href="#gallery" class="hover:text-gray-500">Gallery</a></li>
+    <li><a href="#about" class="hover:text-gray-500">About</a></li>
+    <li><a href="#contact" class="hover:text-gray-500">Contact</a></li>
+  </ul>
+</nav> -->
+
+<!-- up down scroll wala navbar -->
+
+<nav class="absolute w-full bg-transparent px-6 py-4 flex justify-between items-center z-10">
+  <!-- Logo -->
+  <div class="text-xl font-bold">
+    Logo
+  </div>
+
+  <!-- Navigation Links -->
+  <ul class="flex space-x-8 text-lg font-medium">
+    <li><a href="#trips" class="hover:text-gray-500">Trips</a></li>
+    <li><a href="#gallery" class="hover:text-gray-500">Gallery</a></li>
+    <li><a href="#about" class="hover:text-gray-500">About</a></li>
+    <li><a href="#contact" class="hover:text-gray-500">Contact</a></li>
+  </ul>
+</nav>
+
+
+
+<section class="relative h-screen bg-cover bg-center" style="background-image: url('https://via.placeholder.com/1920x1080');">
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+  <!-- Text Content -->
+  <div class="relative z-10 flex flex-col justify-center items-center h-full text-center text-white px-4">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to Our Journey</h1>
+    <p class="text-lg md:text-xl max-w-2xl">
+      Discover amazing places, create unforgettable memories, and explore the world with us.
+    </p>
+  </div>
+</section>
+
+<section class="mt-16 px-8 lg:px-16 py-8">
+  <!-- Header and Paragraph Section -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+    <!-- Left Box -->
+    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+      <h2 class="text-2xl font-bold text-gray-800">Must Experience Packages</h2>
+    </div>
+
+    <!-- Right Box -->
+    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+      <p class="text-gray-700">
+        Explore a wide range of travel packages designed for every kind of traveler. Whether you're seeking adventure, relaxation, or cultural experiences, we have something special just for you.
+      </p>
+    </div>
+  </div>
+
+  <!-- Cards Section -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <!-- Card 1 -->
+    <div class="group bg-gray-100 rounded-lg overflow-hidden shadow-md">
+      <div class="relative overflow-hidden">
+        <img
+          src="https://cdn.prod.website-files.com/670de0ed891c270ca4643299/671068ed4c0245409e1e5c3c_Trip%2009%20Cover-p-500.png"
+          alt="Package 1"
+          class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+      </div>
+      <div class="p-4">
+        <h3 class="text-lg font-semibold text-gray-800">Package 1</h3>
+        <p class="text-sm text-gray-600">Experience breathtaking views and unforgettable adventures.</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="group bg-gray-100 rounded-lg overflow-hidden shadow-md">
+      <div class="relative overflow-hidden">
+        <img
+          src="https://cdn.prod.website-files.com/670de0ed891c270ca4643299/6710666d6757aea0fab3e666_Trip%2008%20Cover-p-500.png"
+          alt="Package 2"
+          class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+      </div>
+      <div class="p-4">
+        <h3 class="text-lg font-semibold text-gray-800">Package 2</h3>
+        <p class="text-sm text-gray-600">Dive into crystal clear waters and vibrant marine life.</p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="group bg-gray-100 rounded-lg overflow-hidden shadow-md">
+      <div class="relative overflow-hidden">
+        <img
+          src="https://cdn.prod.website-files.com/670de0ed891c270ca4643299/67106640be89304a2b446ab1_Trip%2007%20Cover-p-500.png"
+          alt="Package 3"
+          class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+      </div>
+      <div class="p-4">
+        <h3 class="text-lg font-semibold text-gray-800">Package 3</h3>
+        <p class="text-sm text-gray-600">Explore cultural wonders and historic landmarks.</p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="group bg-gray-100 rounded-lg overflow-hidden shadow-md">
+      <div class="relative overflow-hidden">
+        <img
+          src="https://cdn.prod.website-files.com/670de0ed891c270ca4643299/671065f227b3e30175427534_Trip%2006%20Cover-p-500.png"
+          alt="Package 4"
+          class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+      </div>
+      <div class="p-4">
+        <h3 class="text-lg font-semibold text-gray-800">Package 4</h3>
+        <p class="text-sm text-gray-600">Relax and rejuvenate with serene landscapes and luxury.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="my-16 px-8 lg:px-16 flex justify-center">
+  <div class="w-[80vw] h-[350px] md:h-[370px] rounded-lg overflow-hidden">
+    <video
+      src="https://www.w3schools.com/html/mov_bbb.mp4"
+      class="w-full h-full object-cover"
+      autoplay
+      loop
+      muted
+    ></video>
+  </div>
+</section> -->
+
+<section class="my-16 px-8 lg:px-16 flex justify-center relative">
+  <div class="w-[80vw] h-[350px] md:h-[370px] rounded-lg overflow-hidden relative">
+    <!-- Video -->
+    <video
+      src="https://www.w3schools.com/html/mov_bbb.mp4"
+      class="w-full h-full object-cover"
+      autoplay
+      loop
+      muted
+    ></video>
+
+    <!-- Text Overlay -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <h1 class="text-blue-600 italic text-3xl md:text-4xl lg:text-5xl font-bold">
+        Your Centered Message
+      </h1>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">
+      Real <span class="italic">stories</span> from travelers
+    </h2>
+    <div class="relative flex items-center space-x-4 overflow-hidden">
+      <!-- Testimonial Cards -->
+      <div class="flex space-x-6">
+        <!-- Card 1 -->
+        <div class="bg-white border border-gray-200 shadow-lg p-6 rounded-xl w-[300px]">
+          <p class="text-gray-600 mb-4">
+            Xplore's commitment to customer satisfaction is truly commendable. If you want a travel experience that goes beyond the ordinary, highly recommend Xplore.
+          </p>
+          <div class="flex items-center space-x-4">
+            <img
+              src="https://cdn.prod.website-files.com/6704980959c22352c2589f32/670dd469c9c3766a1f178059_Woman%202-p-500.png"
+              alt="User Image"
+              class="rounded-full w-12 h-12 object-cover"
+            />
+            <div>
+              <p class="font-bold text-gray-800">Priya Marcella</p>
+              <p class="text-sm text-gray-600">India</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white border border-gray-200 shadow-lg p-6 rounded-xl w-[300px]">
+          <p class="text-gray-600 mb-4">
+            They provided an amazing adventure that I'll never forget. The accommodations were top-notch, and the itinerary was a perfect trip of relaxation and excitement.
+          </p>
+          <div class="flex items-center space-x-4">
+            <img
+              src="https://cdn.prod.website-files.com/6704980959c22352c2589f32/670dd469c9c3766a1f178059_Woman%202-p-500.png"
+              alt="User Image"
+              class="rounded-full w-12 h-12 object-cover"
+            />
+            <div>
+              <p class="font-bold text-gray-800">Jose Miguel</p>
+              <p class="text-sm text-gray-600">Spain</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white border border-gray-200 shadow-lg p-6 rounded-xl w-[300px]">
+          <p class="text-gray-600 mb-4">
+            Their diverse range of destinations and unwavering commitment to customer satisfaction make them my go-to choice for future adventures.
+          </p>
+          <div class="flex items-center space-x-4">
+            <img
+              src="https://cdn.prod.website-files.com/6704980959c22352c2589f32/670dd469c9c3766a1f178059_Woman%202-p-500.png"
+              alt="User Image"
+              class="rounded-full w-12 h-12 object-cover"
+            />
+            <div>
+              <p class="font-bold text-gray-800">Angelina Diana</p>
+              <p class="text-sm text-gray-600">Italy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of Testimonial Cards -->
+    </div>
+
+    <!-- Dots for navigation -->
+    <div class="flex justify-center mt-6">
+      <span class="h-2 w-2 bg-gray-300 rounded-full mx-1"></span>
+      <span class="h-2 w-2 bg-gray-800 rounded-full mx-1"></span>
+      <span class="h-2 w-2 bg-gray-300 rounded-full mx-1"></span>
+    </div>
+  </div>
+</section>
+
+
+<div class="container mx-auto py-16">
+  <div class="grid sm:grid-cols-3 gap-4 ">
+      <div class="bg-white rounded-lg shadow-md p-6">
+          <div class="flex items-center mb-4">
+              <div class="bg-blue-100 rounded-full p-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0 1 18 0z" />
+                  </svg>
+              </div>
+          </div>
+          <h2 class="text-xl font-bold mb-2">GRAPHIC DESIGN</h2>
+          <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6">
+          <div class="flex items-center mb-4">
+              <div class="bg-blue-100 rounded-full p-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0 1 18 0z" />
+                  </svg>
+              </div>
+          </div>
+          <h2 class="text-xl font-bold mb-2">AWESOME CODE</h2>
+          <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6">
+          <div class="flex items-center mb-4">
+              <div class="bg-blue-100 rounded-full p-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18v18H3V3z" />
+                  </svg>
+              </div>
+          </div>
+          <h2 class="text-xl font-bold mb-2">FREE TEMPLATE</h2>
+          <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+      </div>
+  </div>
+</div>
+
+
+<div class="container mx-auto px-4 py-16 text-center">
+  <h1 class="text-4xl font-bold mb-4">Our true beliefs <br>for your benefits</h1>
+  <p class="text-gray-500 mb-12">Our beliefs aren't just words; they are the foundation of every adventure we offer. With high commitment to sustainability, authenticity, and customer-centricity, we ensure that every trip you take with us is valuable.</p>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="bg-gray-100 rounded-lg shadow-md p-6">
+          <div class="flex items-center mb-4">
+              <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14c0 1.104-.896 2-2 2s-2-.896-2-2c0-1.104.896-2 2-2s2 .896 2 2z"></path></svg>
+              <h3 class="ml-3 text-lg font-bold">Customer-Centric</h3>
+          </div>
+          <p class="text-gray-70 0">Being customer-centric is the compass that guides our travel services. We prioritize our customers' needs.</p>
+      </div>
+      <div class="bg-black text-white rounded-lg shadow-md p-6">
+          <div class="flex items-center mb-4">
+            <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14c0 1.104-.896 2-2 2s-2-.896-2-2c0-1.104.896-2 2-2s2 .896 2 2z"></path></svg>
+            <h3 class="ml-3 text-lg font-bold">Sustainable Travel</h3>
+          </div>
+          <p class="text-gray-100">Committed to responsible and eco-conscious journeys, traveling the world with minimal footprints and pollutions.</p>
+      </div>
+      <div class="bg-gray-100 rounded-lg shadow-md p-6">
+          <div class="flex items-center mb-4">
+              <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+              <h3 class="ml-3 text-lg font-bold">Authentic Experiences</h3>
+          </div>
+          <p class="text-gray-700">We deliver journeys that immerse you in unforgettable encounters with the world's diverse cultures & landscapes.</p>
+      </div>
+      <div class="bg-black text-white rounded-lg shadow-md p-6">
+          <div class="flex items-center mb-4">
+              <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v8m4-4H8"></path></svg>
+              <h3 class="ml-3 text-lg font-bold">Quality Guides</h3>
+          </div>
+          <p class="text-gray-100">Every journey will be led by knowledgeable, passionate experts who enhance your travel experience.</p>
+      </div>
+  </div>
+</div>
+
+
