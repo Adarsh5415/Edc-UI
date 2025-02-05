@@ -1,0 +1,145 @@
+
+
+
+.custom-background {
+
+}
+
+
+
+.overlay {
+
+}
+
+.custom-background > * {
+
+}
+
+
+/* Base Styles (Default for large screens) */
+.timer-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: #121212; */
+  /* height: 100vh; */
+  margin-top:50px;
+}
+
+#time {
+  display: flex;
+  gap: 30px;
+}
+
+#time .circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#time .circle svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(270deg);
+}
+
+#time .circle svg circle {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke-width: 8;
+  stroke: #282828;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+}
+
+#time .circle svg circle:nth-child(2) {
+  stroke: var(--clr);
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+}
+
+#time div {
+  position: absolute;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+#time div span {
+  position: absolute;
+  transform: translateX(-50%) translateY(10px);
+  font-size: 0.35em;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+#time .dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1000;
+}
+
+#time .dots::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  width: 15px;
+  height: 15px;
+  background: var(--clr);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
+}
+
+.time-labels{
+  font-size: 10em;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.newYear {
+  font-size: 8em;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  line-height: 0.6em;
+  display: none;
+}
+
+.newYear span {
+  font-size: 0.5em;
+  font-weight: 300;
+}
+
+/* For screens smaller than 768px (Tablets and smaller devices) */
+@media (max-width: 768px) {
+  .timer-background {
+    transform: scale(0.65); /* Reduce size of entire element */
+  }
+}
+
+/* For screens smaller than 480px (Mobile Portrait) */
+@media (max-width: 480px) {
+  .timer-background {
+    transform: scale(0.55); /* Further reduce size */
+  }
+}
+
+/* For very small screens (Mobile Portrait, below 360px) */
+@media (max-width: 360px) {
+  .timer-background {
+    transform: scale(0.45); /* Reduce further for very small screens */
+  }
+}

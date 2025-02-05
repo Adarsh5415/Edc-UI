@@ -1,0 +1,63 @@
+/* .carousel {
+
+  position: relative;
+  width: 80%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  height: 70vh;
+ transition: transform 0.5s linear ;
+  animation: animation 20s linear infinite;
+  will-change: transform; 
+}
+
+
+.slide {
+  min-width: 100%; 
+  text-align: center;
+  padding: 20px;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 124px;
+  padding: 10px;
+  z-index: 1000;
+  display: block;
+}
+
+.left-btn {
+  left: 10px;
+}
+
+.right-btn {
+  right: 10px;
+}
+
+@media (min-width: 768px) {
+  .slide {
+    min-width:  calc(100% / 2);
+  }
+}
+
+@media (min-width: 1024px) {
+  .slide {
+    min-width: calc(100% / 3); 
+  }
+} */
+
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}

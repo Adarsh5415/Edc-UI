@@ -1,15 +1,53 @@
 import { Component } from '@angular/core';
 import { Router,RouterModule } from '@angular/router';
+import {ElementRef, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HomeScholarshipComponent } from '../home-scholarship/home-scholarship.component';
+import { CarouselComponent } from '../carousel/carousel.component';
+import { OnInit } from '@angular/core';
+
+
+
 @Component({
   selector: 'app-user-dashboard',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule,CommonModule,HomeScholarshipComponent,CarouselComponent],
   templateUrl: './user-dashboard.component.html',
   styleUrl: './user-dashboard.component.css'
 })
 export class UserDashboardComponent {
+  @ViewChild('carousel', { static: true }) carousel!: ElementRef;
+  cards = ['Card 1', 'Card 2', 'Card 3', 'Card 4', 'Card 5', 'Card 6'];
+  isHovered = false;
+
+  scrollLeft() {
+    const container = this.carousel.nativeElement;
+    container.scrollBy({
+      left: -200, // Adjust based on card width
+      behavior: 'smooth',
+    });
+  }
+
+  scrollRight() {
+    const container = this.carousel.nativeElement;
+    container.scrollBy({
+      left: 200, // Adjust based on card width
+      behavior: 'smooth',
+    });
+  }
+
+  pauseScrolling() {
+    this.isHovered = true;
+  }
+
+  resumeScrolling() {
+    this.isHovered = false;
+  }
 
   
 }
+
+
+  
 
 

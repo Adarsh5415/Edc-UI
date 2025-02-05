@@ -1,0 +1,575 @@
+
+body {
+    background-color: #757575;
+  }
+  
+  
+  /* Home Background */
+  .home-background {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    animation: changeBackground 5s infinite;
+  }
+  
+  /* Background Image Animation */
+  /* @keyframes changeBackground {
+    0% {
+      background-image: url('../../../public/image/girl-compressed.webp');
+    }
+    30% {
+      background-image: url('../../../public/image/north-compressed.webp');
+    }
+    60% {
+      background-image: url('../../../public/image/college-compressed.webp');
+    }
+    90% {
+      background-image: url('../../../public/image/girl-south-compressed.webp');
+    }
+    100% {
+      background-image: url('../../../public/image/girl-compressed.webp');
+    }
+  } */
+  
+  /* Mask Overlay */
+  .mask-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black mask */
+    z-index: 1; /* Places the mask over the background but under the content */
+    pointer-events: none; /* Ensures the mask does not interfere with user interactions */
+  }
+  
+  /* Content Styling */
+  .container {
+    /* position: relative;
+    z-index: 2;  */
+  }
+  
+h3{
+
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+    font-family: 'job';
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 50px;
+    text-shadow: 0px 0px 60px #003399;
+          
+           
+           
+        
+    
+}
+
+  
+  
+  h1 {
+    font-size: 3.5rem;
+    color: white;
+    font-weight: bold;
+    font-family: 'job';
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+  }
+
+
+    
+  p {
+    font-size: 0.8rem;
+    color:#c4c4c4;
+    font-family: 'job';
+
+    margin-top: 40px;
+    
+  }
+  
+  
+
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+        h3{
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+      }
+      
+      @media (max-width: 576px) {
+        h1 {
+          font-size: 2rem;
+        }
+
+        h3{
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+      }
+  
+      
+  button {
+    margin-top: 80px;
+    z-index: 3;
+  }
+  
+  
+  
+  .edc-logo {
+    height: 1.5em;
+    width: auto;
+    
+  }
+  
+  .edc {
+    /* margin-top: 2000px; */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  
+  .edc-background{
+    background-color: aliceblue;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 50px;
+    padding: 5px;
+  }
+  
+  
+  .quote {
+    margin-top: 10px;
+    font-family: cursive;
+    color: yellow;
+    font-size: 1.15rem;
+  }
+  
+  
+  
+  /* Slide down animation */
+  .quote-down,
+  .quote-up {
+    opacity: 0; /* Start invisible */
+    display: inline-block; /* Treat the spans as inline blocks */
+    animation-fill-mode: forwards; /* Keeps the final state after animation */
+    
+  }
+  
+  /* Slide down animation for the first text */
+  .quote-down {
+    animation: slideDown 2s ease-out forwards;
+  }
+  
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-1000px); /* Start position - above the viewport */
+      opacity: 0; /* Start invisible */
+    }
+    100% {
+      transform: translateY(0); /* End position - in the original place */
+      opacity: 1; /* End with full opacity */
+    }
+  }
+  
+  /* Slide up animation for the second text */
+  .quote-up {
+    animation: slideUp 3s ease-out forwards; /* Add a delay for staggered effect */
+  }
+  
+  @keyframes slideUp {
+    0% {
+      transform: translateY(1000px); /* Start position - below the viewport */
+      opacity: 0; /* Start invisible */
+    }
+    100% {
+      transform: translateY(0); /* End position - in the original place */
+      opacity: 1; /* End with full opacity */
+    }
+  }
+  
+  
+  .text-container {
+    font-size: 40px; /* Adjust the font size */
+    display: flex;
+  }
+  
+  .text-letter {
+    opacity: 0; /* Start with the letters invisible */
+    animation: slideIn 1s ease-out forwards;
+    margin-right: 5px; /* Space between letters */
+  }
+  
+  /* Define animation for each letter */
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-20px); /* Start position - move from left */
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0); /* End position - move to original */
+      opacity: 1; /* Fully visible */
+    }
+  }
+  
+  
+  
+  .custom-card {
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    display: flex; /* Enable Flexbox */
+    align-items: center; /* Vertically center items */
+    justify-content: center;
+    padding:10px;
+    height: 80px;
+  
+  }
+  
+  .custom-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* .card-body {
+    background-color: #fdfeff;
+  
+  } */
+  
+  
+  
+  
+  .card-body {
+    background-color: #fdfeff;
+     /* Ensure no underline */
+    color: rgb(78, 76, 76); /* Default text color */
+  }
+  
+  
+  
+  .card-text {
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .about-exam-section{
+    /* border: 1px solid #007bff; */
+  }
+  
+  
+  
+  .about-exam-section .details {
+    line-height: 2;
+    font-size: 1rem;
+    color: #5f5f5f;
+  }
+  
+  .about-exam-section h4 {
+    margin-bottom: 1rem;
+  }
+  
+  .about-exam-section ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+  }
+  
+  .about-exam-section ul ul {
+    list-style-type: circle;
+    padding-left: 1.5rem;
+  }
+  
+  .about-exam-heading{
+    color: #5f5f5f;
+    font-size: 1.6rem;
+  }
+  
+  .mt-10{
+    margin-top: 50px;
+  }
+  
+  
+  .line-previous-yr {
+    width: 30%; /* Set the width of the horizontal rule */
+    height: 2px; /* Adjust the height as needed */
+    background-color: #007bff; /* Replace with your desired primary color */
+    margin: 0 auto; /* Center the horizontal rule */
+    border: none; /* Remove the default border */
+  }
+  
+  .line {
+    width: 50%; /* Set the width of the horizontal rule */
+    height: 2px; /* Adjust the height as needed */
+    background-color: #007bff; /* Replace with your desired primary color */
+    margin: 0 auto; /* Center the horizontal rule */
+    border: none; /* Remove the default border */
+  }
+  
+  
+  .line-syllabus {
+    width: 30%; /* Set the width of the horizontal rule */
+    height: 2px; /* Adjust the height as needed */
+    background-color: #007bff; /* Replace with your desired primary color */
+    margin: 0 auto; /* Center the horizontal rule */
+    border: none; /* Remove the default border */
+  }
+  
+  .line-mission-vision{
+    width: 15%; /* Set the width of the horizontal rule */
+    height: 2px; /* Adjust the height as needed */
+    background-color: #007bff; /* Replace with your desired primary color */
+    margin: 0 auto; /* Center the horizontal rule */
+    border: none; /* Remove the default border */
+  }
+  
+  .line-mission{
+    width: 5%; /* Set the width of the horizontal rule */
+    height: 2px; /* Adjust the height as needed */
+    background-color: #007bff; /* Replace with your desired primary color */
+    margin: 0 auto; /* Center the horizontal rule */
+    border: none; /* Remove the default border */
+  }
+  
+  
+  .about-vmc-section {
+    line-height: 1.8;
+    font-size: 1rem;
+    color: #5f5f5f;
+  }
+  
+  .about-vmc-section h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  
+  .about-vmc-section h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #6c757d;
+  }
+  
+  .about-vmc-section img {
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .about-vmc-section img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .about-edc-img{
+  
+  }
+  
+  
+  .centered-text {
+    text-align: justify; /* Justifies the text */
+    margin: 0 auto;      /* Centers the block horizontally */
+    max-width: 600px;    /* Optional: Sets a maximum width for better readability */
+    line-height: 1.8;    /* Improves text spacing */
+    font-size: 1rem;     /* Adjusts text size */
+    color: #5f5f5f;      /* Adjusts text color (optional) */
+  }
+  
+  .partners-img {
+    max-height: 500px; /* Set a maximum height for logos */
+    object-fit: contain; /* Ensure logos maintain their aspect ratio */
+  }
+  
+  
+  
+  
+  .knowlwdge-img {
+    max-height: 120px; /* Set a maximum height for logos */
+    object-fit: contain; /* Ensure logos maintain their aspect ratio */
+  }
+  
+  .text-primary {
+    color: #007bff; /* Optional: Bootstrap primary blue */
+  }
+  
+  .shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow around logos */
+  }
+  
+
+  
+  .knowlwdge-heading {
+  
+    color: #5f5f5f;
+    font-size: 1.6rem;
+  }
+  
+  
+  .scroll-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #007bff; /* Bootstrap Primary Color */
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+    transition: opacity 0.3s ease;
+  }
+  
+  .scroll-button:hover {
+    background-color: #0056b3; /* Darker primary color */
+  }
+  
+  
+  
+  
+  .card-number {
+  
+  margin-bottom:20px;
+  }
+  
+  .number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #003399;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .label {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
+  
+  #slide-container {
+    overflow: hidden;
+    /* margin-bottom: 3rem; */
+    width: 100%;
+    margin-top: 5rem;
+    /* background-color: #007bff; */
+    /* position: relative; */
+  }
+  
+  #slide-text {
+    display: inline-block;
+    white-space: nowrap;
+  
+    height: 100%;
+    text-align: center;
+    transform: translateY(100%);
+    animation: animation 20s linear infinite;
+    animation-delay: 0s;
+  }
+  
+  #slide-text:hover {
+  animation-play-state: paused; 
+  }
+  
+  @keyframes animation {
+    from {
+        transform: translateX(10%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+  }
+  
+  .text-color-change {
+    color: white; /* Default color */
+  }
+  
+  .text-color-change:hover {
+    color: yellow; /* Hover color */
+  }
+
+  .container-info {
+    margin-top:10px;
+    position: relative;
+    padding: 100px 20px; /* Increase top and bottom padding to 40px, keep left and right padding at 20px */
+    border-radius: 10px;
+    background-image: url('../../assets/timerbackground.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+
+.container-info::before {
+  content: ''; /* Empty content for the pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9); /* Dark overlay with 50% opacity */
+  border-radius: 10px; /* Same border-radius as the container */
+  z-index: 1; /* Make sure the overlay is on top of the image */
+}
+
+.container-info .row {
+  position: relative; /* Ensure the content stays above the overlay */
+  z-index: 2; /* Make sure the text/content is above the overlay */
+}
+
+
+
+
+
+
+
+  
+
+/* From Uiverse.io by ShrinilDhorda */ 
+.btn {
+    
+    width:fit-content;
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #003399;
+    color: rgb(234, 234, 234);
+    font-weight: 700;
+    transition: 0.6s;
+    /* box-shadow: 0px 0px 60px #1f4c65;
+    -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4)); */
+  }
+  
+  .btn:active {
+    scale: 0.92;
+  }
+  
+  .btn:hover {
+    background: rgb(2,29,78);
+    background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+    color: rgb(4, 4, 38);
+  }
+  
+ 

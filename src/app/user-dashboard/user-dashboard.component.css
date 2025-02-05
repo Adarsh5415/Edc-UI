@@ -1,0 +1,40 @@
+.carousel-container {
+    width: 100%;
+    height: 400px; 
+    position: relative;
+  }
+  
+  .cards-container {
+    display: flex;
+    animation: scroll-right 10s linear infinite;
+    will-change: transform;
+    -moz-animation-direction: alternate;
+  }
+  
+  .cards-container.paused {
+    animation-play-state: paused;
+  }
+  
+  @keyframes scroll-right {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .card {
+    min-width: 16rem;
+    height: 300px;
+    flex-shrink: 0;
+  }
+  
+  button {
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+
+  

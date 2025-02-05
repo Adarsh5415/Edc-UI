@@ -1,0 +1,58 @@
+<!-- <div class="w-[100%] bg-slate-700 relative h-[79vh] mt-10 sm:p-3 p-8">
+  <button class="btn left-btn" (click)="prevSlide()">&#8249;</button>
+
+  <div class="carousel mt-12 sm:mt-10 ml-8  sm:ml-28">
+
+    <div #slidesContainer class="slides"
+      [ngStyle]="{'transform': 'translateX(' + (-currentIndex * (100 / slidesPerView)) + '%)'}">
+      <div *ngFor="let slide of slides" class="slide" [ngStyle]="{'background-color': slide.color}">
+        {{ slide.text }}
+      </div>
+    </div>
+
+  </div>
+  <button class="btn right-btn" (click)="nextSlide()">&#8250;</button>
+
+</div> -->
+
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">Slide 1</div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>
+    ...
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
+
+<swiper-container loop="true" navigation="true">
+  <div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      ...
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+</swiper-container>
