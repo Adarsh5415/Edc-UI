@@ -65,6 +65,6 @@
 //     }
 //   }
 // }
-import { SwiperModule } from 'swiper/angular';  // Correct import path
-import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';  // Core Swiper imports
+// import { SwiperModule } from 'swiper/angular';  // Correct import path
+// import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';  // Core Swiper imports
 

@@ -3,7 +3,7 @@ import { Router,RouterModule } from '@angular/router';
 import {ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeScholarshipComponent } from '../home-scholarship/home-scholarship.component';
-import { CarouselComponent } from '../carousel/carousel.component';
+// import { CarouselComponent } from '../carousel/carousel.component';
 import { OnInit } from '@angular/core';
 
 
@@ -11,7 +11,7 @@ import { OnInit } from '@angular/core';
 @Component({
   selector: 'app-user-dashboard',
   standalone: true,
-  imports: [RouterModule,CommonModule,HomeScholarshipComponent,CarouselComponent],
+  imports: [RouterModule,CommonModule,HomeScholarshipComponent],
   templateUrl: './user-dashboard.component.html',
   styleUrl: './user-dashboard.component.css'
 })

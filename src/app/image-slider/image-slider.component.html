@@ -1,0 +1,27 @@
+<div class="outer-container">
+    <div class="inner-container">
+        <div class="slider-container">
+            <div 
+                class="slider-item" 
+                *ngFor="let image of images; let i = index"
+                [ngClass]="{
+                    'selected': i === selectedIndex,
+                    'prev': i === selectedIndex - 1,
+                    'next': i === selectedIndex + 1,
+                    'hideLeft' : i < selectedIndex - 1,
+                    'hideRight' : i > selectedIndex + 1,
+                }"
+            >
+            <img 
+                [src]="image.imgSrc"
+                [alt]="image.imgAlt" 
+                class="slider-img"
+                (panright)="showPrev(i); console.log('Pan right triggered')"
+                (panleft)="showNext(i); console.log('Pan left triggered')"
+            >
+            </div> 
+        </div>
+    </div>
+</div>
+
+
