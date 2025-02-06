@@ -1,0 +1,87 @@
+.toast {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    /* background: linear-gradient(135deg, #ff0080, #ff8c00); */
+    background-color: aliceblue;
+
+    color:black;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    min-width: 250px;
+    max-width: 300px;
+    animation: slideIn 0.5s ease, fadeOut 0.5s ease 4.5s forwards;
+    overflow: hidden;
+    z-index: 50;
+  }
+  
+  /* .toast-icon {
+    background: white;
+    border-radius: 50%;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
+  
+  .toast-message {
+    margin-left: 12px;
+    font-size: 14px;
+    font-weight:400;
+    flex: 1;
+  }
+  
+  .toast-close {
+    background: none;
+    border: none;
+    color:black;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .toast-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: white;
+    width: 100%;
+    animation: progressBar 5s linear forwards;
+  }
+
+  .toast:hover .toast-progress {
+    animation-play-state: paused;
+  }
+  
+  
+  /* Slide-in animation */
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Fade-out animation */
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+  }
+  
+  /* Progress bar animation */
+  @keyframes progressBar {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0;
+    }
+  }
+  

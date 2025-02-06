@@ -1,6 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HammerModule } from '@angular/platform-browser';
+import { HostListener } from '@angular/core';
+
+
 
 export interface Slide{
   imgSrc: string;
@@ -16,19 +19,114 @@ export interface Slide{
 })
 export class ImageSliderComponent implements OnInit {
 
+  selectedIndex = 0;
+
   ngOnInit() {
-    if (typeof window !== 'undefined') {
-      import('hammerjs').then(() => {
-        console.log('Hammer.js is loaded');
-      });
+    // if (typeof window !== 'undefined') {
+    //   import('hammerjs').then(() => {
+    //     console.log('Hammer.js is loaded');
+    //   });
+    // }
+    // this.showNext(2);
+  }
+
+  // Touch control
+
+  private touchStartX = 0;
+  private touchEndX = 0;
+
+
+  @HostListener('click', ['$event'])
+  onClick(event: MouseEvent) {
+    console.log("Clicked!");
+  }
+
+  @HostListener('touchstart', ['$event'])
+  onTouchStart(event: TouchEvent) {
+    this.touchStartX = event.changedTouches[0].screenX;
+  }
+
+  @HostListener('touchend', ['$event'])
+  onTouchEnd(event: TouchEvent) {
+    this.touchEndX = event.changedTouches[0].screenX;
+    this.handleSwipe(this.selectedIndex);
+  }
+
+  private handleSwipe(i: number) {
+    const diff = this.touchStartX - this.touchEndX;
+    if (diff > 50) {
+      console.log("Swiped Left!");
+      this.showNext(i);
+    } else if (diff < -50) {
+      console.log("Swiped Right!");
+      this.showPrev(i);
     }
-    this.showNext(2);
   }
   
  
-  // @Input() images: Slide[] = [];
+  // Mouse Control and touch
 
-  selectedIndex = 0;
+
+  // private startX = 0;
+  // private endX = 0;
+  // private isMouseDown = false;
+
+  // // ✅ Click Event
+  // @HostListener('click', ['$event'])
+  // onClick(event: MouseEvent) {
+  //   console.log("Clicked!");
+  // }
+
+  // // ✅ Touch Start
+  // @HostListener('touchstart', ['$event'])
+  // onTouchStart(event: TouchEvent) {
+  //   this.startX = event.changedTouches[0].screenX;
+  // }
+
+  // // ✅ Touch End
+  // @HostListener('touchend', ['$event'])
+  // onTouchEnd(event: TouchEvent) {
+  //   this.endX = event.changedTouches[0].screenX;
+  //   this.handleSwipe(this.selectedIndex);
+  // }
+
+  // // ✅ Mouse Down (Start Swipe)
+  // @HostListener('mousedown', ['$event'])
+  // onMouseDown(event: MouseEvent) {
+  //   this.isMouseDown = true;
+  //   this.startX = event.clientX;
+  // }
+
+  // // ✅ Mouse Move (Track Movement)
+  // @HostListener('mousemove', ['$event'])
+  // onMouseMove(event: MouseEvent) {
+  //   if (this.isMouseDown) {
+  //     this.endX = event.clientX;
+  //   }
+  // }
+
+  // // ✅ Mouse Up (End Swipe)
+  // @HostListener('mouseup', ['$event'])
+  // onMouseUp(event: MouseEvent) {
+  //   this.isMouseDown = false;
+  //   this.handleSwipe(this.selectedIndex);
+  // }
+
+  // // ✅ Swipe Detection Logic
+  // private handleSwipe(i: number) {
+  //   const diff = this.startX - this.endX;
+  //   if (diff > 50) {
+  //         console.log("Swiped Left!");
+  //         this.showNext(i);
+  //       } else if (diff < -50) {
+  //         console.log("Swiped Right!");
+  //         this.showPrev(i);
+  //       }
+  // }
+
+  
+
+  
 
   showPrev(i: number){
     if(this.selectedIndex>0){

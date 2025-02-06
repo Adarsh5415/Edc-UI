@@ -3,6 +3,6 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { ImageSliderComponent } from './image-slider/image-slider.component';
 
 export const routes: Routes = [
-    {path:'user-dashboard',component:UserDashboardComponent},
+    {path:'',component:UserDashboardComponent},
     {path:'images',component:ImageSliderComponent},
 ];

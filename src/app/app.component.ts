@@ -4,6 +4,8 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+// import  '@squadette/hammerjs';
+
 @Component({
   selector: 'app-root',
   standalone: true,
