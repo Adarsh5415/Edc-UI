@@ -12,7 +12,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     min-width: 250px;
-    max-width: 300px;
+    max-width: 340px;
     animation: slideIn 0.5s ease, fadeOut 0.5s ease 4.5s forwards;
     overflow: hidden;
     z-index: 50;
@@ -47,7 +47,7 @@
     bottom: 0;
     left: 0;
     height: 2px;
-    background: white;
+    background:black;
     width: 100%;
     animation: progressBar 5s linear forwards;
   }
