@@ -37,7 +37,9 @@
     </div>
 </div>
 -->
-
+<!--
+<app-toast *ngIf="showToast"></app-toast>
+-->
 <div class="outer-container container mx-auto">
     <div class="inner-container">
         <div class="slider-container">
@@ -61,6 +63,7 @@
                     [alt]="image.imgAlt" 
                     class="slider-img"
                     (click)='handleSwipe(i)'
+                    (click)='navigateGallery()'
                 >
             </div> 
             

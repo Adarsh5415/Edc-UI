@@ -18,3 +18,97 @@ body {
     justify-content: center;
     font-family: 'Poppins-regular';
   }
+
+
+  .flip-image {
+    transform: scaleX(-1);
+}
+
+
+
+
+
+
+@keyframes appear-up {
+  from {
+    opacity: 0;
+    /* clip-path: inset(100% 100% 0 0); */
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    /* clip-path: inset(0 0 0 0); */
+    transform: translate(0px);
+  }
+}
+
+.block-up {
+  animation: appear-up linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+
+@keyframes appear-down {
+  from {
+    opacity: 0;
+    /* clip-path: inset(100% 100% 0 0); */
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    /* clip-path: inset(0 0 0 0); */
+    transform: translate(0px);
+  }
+}
+
+.block-down {
+  animation: appear-down linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+
+
+@keyframes appear-left {
+  from {
+    opacity: 0;
+    /* clip-path: inset(100% 100% 0 0); */
+    transform: translate(-100px);
+  }
+  to {
+    opacity: 1;
+    /* clip-path: inset(0 0 0 0); */
+    transform: translate(0px);
+  }
+}
+
+.block-left {
+  animation: appear-left linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+
+
+@keyframes appear-right {
+  from {
+    opacity: 0;
+    /* clip-path: inset(100% 100% 0 0); */
+    transform: translate(100px);
+  }
+  to {
+    opacity: 1;
+    /* clip-path: inset(0 0 0 0); */
+    transform: translate(0px);
+  }
+}
+
+.block-right {
+  animation: appear-right linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;;
+}
+
+  
+

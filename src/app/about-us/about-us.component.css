@@ -1,0 +1,97 @@
+
+
+.custom-background{
+    background-color: aliceblue;
+    height:100vh;
+    width:100vw;
+    color:#555;
+    margin: 10px;
+
+}
+
+.heading{
+    color:#00339B;
+    font-size: 1.5rem; 
+    font-weight:500;
+}
+
+.content{
+    font-size: 0.9rem;
+    line-height: 2;
+
+}
+
+
+.mission-vision-image{
+    height:auto;
+    width:100%
+}
+
+@keyframes appear-left {
+    from {
+      opacity: 0;
+      transform: translate(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0px);
+    }
+  }
+  
+  .block-left-about {
+    animation: appear-left 1s ease-out forwards; /* Add duration, timing function, and ensure it stays after animation */
+  }
+  
+  @keyframes appear-right {
+    from {
+      opacity: 0;
+      transform: translate(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0px);
+    }
+  }
+  
+  .block-right-about {
+    animation: appear-right 1s ease-out forwards; /* Add duration, timing function, and ensure it stays after animation */
+  }
+
+
+  @keyframes appear-up {
+    from {
+      opacity: 0;
+      /* clip-path: inset(100% 100% 0 0); */
+      transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+      /* clip-path: inset(0 0 0 0); */
+      transform: translate(0px);
+    }
+  }
+  
+  .block-up {
+    /* animation: appear-up linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%; */
+    animation: appear-up 1s ease-out forwards;
+  }
+  
+  
+
+  @media (max-width: 480px){
+
+    .block-left-about {
+        animation: appear-left linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 30%;
+      }
+
+      .block-right-about {
+        animation: appear-right linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 30%;
+      }
+      
+}
