@@ -6,13 +6,14 @@ import { HomeScholarshipComponent } from '../home-scholarship/home-scholarship.c
 // import { CarouselComponent } from '../carousel/carousel.component';
 import { OnInit } from '@angular/core';
 import { ImageSliderComponent } from '../image-slider/image-slider.component';
+import { ToastComponent } from '../toast/toast.component';
 
 
 
 @Component({
   selector: 'app-user-dashboard',
   standalone: true,
-  imports: [RouterModule,CommonModule,HomeScholarshipComponent,ImageSliderComponent],
+  imports: [RouterModule,CommonModule,HomeScholarshipComponent,ToastComponent],
   templateUrl: './user-dashboard.component.html',
   styleUrl: './user-dashboard.component.css'
 })
