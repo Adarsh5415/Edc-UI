@@ -2,8 +2,9 @@ import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HammerModule } from '@angular/platform-browser';
 import { HostListener } from '@angular/core';
-
-
+import { RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
+import { ToastComponent } from '../toast/toast.component';
 
 export interface Slide{
   imgSrc: string;
@@ -13,13 +14,16 @@ export interface Slide{
 @Component({
   selector: 'app-image-slider',
   standalone: true,
-  imports: [CommonModule, HammerModule],
+  imports: [CommonModule, HammerModule, RouterModule, ToastComponent],
   templateUrl: './image-slider.component.html',
   styleUrl: './image-slider.component.css'
 })
 export class ImageSliderComponent implements OnInit {
 
-  selectedIndex = 0;
+  selectedIndex = 5;
+  showToast:boolean = false;
+
+  constructor(private router: Router) {}
 
   ngOnInit() {
     // if (typeof window !== 'undefined') {
@@ -34,16 +38,31 @@ export class ImageSliderComponent implements OnInit {
 
   private touchStartX = 0;
   private touchEndX = 0;
+  lastTouchTime: number = 0;  // Time of the last touch event
+  doubleTapThreshold: number = 300;
 
 
   @HostListener('click', ['$event'])
   onClick(event: MouseEvent) {
     console.log("Clicked!");
+    // this.router.navigate(['/gallery']); 
+    
   }
 
   @HostListener('touchstart', ['$event'])
   onTouchStart(event: TouchEvent) {
+
+    const currentTime = new Date().getTime();
+    const timeDiff = currentTime - this.lastTouchTime;
+
     this.touchStartX = event.changedTouches[0].screenX;
+
+    if (timeDiff <= this.doubleTapThreshold) {
+      this.onDoubleTap(event);  // Handle double-tap
+    }
+
+    this.lastTouchTime = currentTime;
+
   }
 
   @HostListener('touchend', ['$event'])
@@ -53,6 +72,7 @@ export class ImageSliderComponent implements OnInit {
   }
 
   private handleSwipe(i: number) {
+    this.showToast = true;
     const diff = this.touchStartX - this.touchEndX;
     if (diff > 50) {
       console.log("Swiped Left!");
@@ -62,6 +82,17 @@ export class ImageSliderComponent implements OnInit {
       this.showPrev(i);
     }
   }
+
+  onDoubleTap(event: TouchEvent) {
+    console.log('Double Tap Detected');
+    this.router.navigate(['/gallery']); 
+  }
+
+  navigateGallery(){
+    this.router.navigate(['/gallery']);
+  }
+
+
   
  
   // Mouse Control and touch
@@ -129,12 +160,14 @@ export class ImageSliderComponent implements OnInit {
   
 
   showPrev(i: number){
+    // this.showToast = true;
     if(this.selectedIndex>0){
       this.selectedIndex=i-1;
     }
   }
 
   showNext(i: number){
+    // this.showToast = true;
     if(this.selectedIndex<this.images?.length-1){
       this.selectedIndex=i+1;
     }
