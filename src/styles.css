@@ -3,9 +3,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Poppins-regular'; /* Name of the font */
+  src: url('/fonts/Poppins/Poppins-Regular.ttf') format('truetype'); /* Path to the .ttf file */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 body {
     max-width: 100%;
     min-width: 100%;
     align-items: center;
     justify-content: center;
+    font-family: 'Poppins-regular';
   }
