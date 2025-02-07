@@ -13,7 +13,7 @@ import { ToastComponent } from '../toast/toast.component';
 @Component({
   selector: 'app-user-dashboard',
   standalone: true,
-  imports: [RouterModule,CommonModule,HomeScholarshipComponent,ToastComponent],
+  imports: [RouterModule,CommonModule,HomeScholarshipComponent,ToastComponent, ImageSliderComponent],
   templateUrl: './user-dashboard.component.html',
   styleUrl: './user-dashboard.component.css'
 })
