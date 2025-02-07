@@ -1,3 +1,5 @@
+<!--
+
 <div class="outer-container">
     <div class="inner-container">
         <div class="slider-container">
@@ -12,7 +14,7 @@
                     'hideRight' : i > selectedIndex + 1,
                 }"
             >
-            <!--
+   
             <img 
                 [src]="image.imgSrc"
                 [alt]="image.imgAlt" 
@@ -21,7 +23,7 @@
                 (panleft)="showNext(i); console.log('Pan left triggered')"
                 (click)='handleSwipe()'
             >
-                -->
+               
 
                 <img 
                 [src]="image.imgSrc"
@@ -34,5 +36,38 @@
         </div>
     </div>
 </div>
+-->
 
+<div class="outer-container container mx-auto">
+    <div class="inner-container">
+        <div class="slider-container">
+            <button class="arrow left" (click)="showPrev(selectedIndex)">
+                &#10094;
+            </button>
+            
+            <div 
+                class="slider-item" 
+                *ngFor="let image of images; let i = index"
+                [ngClass]="{
+                    'selected': i === selectedIndex,
+                    'prev': i === selectedIndex - 1,
+                    'next': i === selectedIndex + 1,
+                    'hideLeft' : i < selectedIndex - 1,
+                    'hideRight' : i > selectedIndex + 1,
+                }"
+            >
+                <img 
+                    [src]="image.imgSrc"
+                    [alt]="image.imgAlt" 
+                    class="slider-img"
+                    (click)='handleSwipe(i)'
+                >
+            </div> 
+            
+            <button class="arrow right" (click)="showNext(selectedIndex)">
+                &#10095;
+            </button>
 
+        </div>
+    </div>
+</div>

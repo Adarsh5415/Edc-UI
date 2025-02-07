@@ -5,13 +5,14 @@ import { CommonModule } from '@angular/common';
 import { HomeScholarshipComponent } from '../home-scholarship/home-scholarship.component';
 // import { CarouselComponent } from '../carousel/carousel.component';
 import { OnInit } from '@angular/core';
+import { ImageSliderComponent } from '../image-slider/image-slider.component';
 
 
 
 @Component({
   selector: 'app-user-dashboard',
   standalone: true,
-  imports: [RouterModule,CommonModule,HomeScholarshipComponent],
+  imports: [RouterModule,CommonModule,HomeScholarshipComponent,ImageSliderComponent],
   templateUrl: './user-dashboard.component.html',
   styleUrl: './user-dashboard.component.css'
 })
